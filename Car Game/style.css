@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.car-animation-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height:100vh;
+    background-color:rgba(000, 100, 150, 1);
+    text-align: center;
+    font-weight: 700;
+    color: #715c2a;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.road-image{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 220px 0 220px;
+    height : 880px;
+    background-image: url(image/Road.jpg);
+    background-size:contain;
+    border: 10px solid rgba(000, 000, 000, .8);
+    overflow: hidden;
+}
+
+#mycar-image{
+    position: absolute;
+    background-image: url("image/playercar.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    left:  320px;
+    padding: 100px 100px 100px 0;
+    bottom: 0;
+    transition-duration: 350ms;
+    transition-property: transform, padding;
+}
+
+/*---------BOT CARS WITH ANIMATION-------------*/
+#botcar1-image{
+    position: absolute;
+    background-image: url(image/botcar1.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    left:  320px;
+    padding: 100px 100px 100px 0;
+    animation: movement 2s linear infinite;
+
+}
+#botcar2-image{
+  
+    position: absolute;
+    background-image: url(image/botcar2.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    left:  160px;
+    padding: 100px 100px 100px 0;
+   animation: movement 2.5s linear infinite;
+   overflow: hidden;
+}
+
+@keyframes movement {
+    0%{
+       top: -200px;
+    }
+    100%{
+       top:900px;
+    }
+    
+}
+
+#game-start-board
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding:100px 300px;
+    background-color: white;
+    text-align: center;
+    box-shadow:  1px 2px 10px 0 rgba(0, 0, 0, 0.65),
+    0 5px 15px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 700;
+    font-size: 2rem;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+#start-button{
+    padding: 10px 20px;
+}
+#pause-button
+{
+position: absolute;
+bottom: 30px;
+left: 50px;
+padding: 10px 30px;
+font-weight: 700;
+background-color: rgba(0, 0, 0, 0.4);
+color: aliceblue;
+}
+#pause-button:focus,p
+#pause-button:hover{  
+    border: 2px solid yellow;
+}
+
+#restart-button{
+position: absolute;
+bottom: 90px;
+left: 50px;
+padding: 10px 22px;
+font-weight: 700;
+background-color: rgba(0, 0, 0, 0.4);
+color: aliceblue;
+}
+#road-move-button{
+    position: absolute;
+    bottom: 150px;
+    left: 50px;
+    padding: 10px 12px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: aliceblue;
+}
+#score-board{
+position: absolute;
+top: 20px;
+right:50px;
+padding: 30px 60px;
+z-index: 3;
+background-color: rgba(0, 0, 0, 0.19);
+border-radius: 10px;
+color:white ;
+}
+.score{
+position: absolute;
+top: 80px;
+right: 55px;
+color: whitesmoke;
+}
+
+#info-box{
+    position: absolute;
+    top : 50px;
+    left: -287px;
+    padding: 10px 10px 10px 24px;
+    background-color:rgba(0, 0, 0, 0.19);
+    color: black;
+    font-weight: 800;
+   text-align: left;
+   text-transform: uppercase;
+   color: rgba(232, 245, 88, 0.8);
+   border-radius: 0 0 10px 6px;
+
+   transition-duration: 350ms;
+   transition-property: background-color, transform;
+   transition-timing-function:ease-out;
+}
+
+#info-box:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translateX(267px);
+}
+.infoinside{
+    color: whitesmoke;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.7);
+    padding: 4px;
+}
+.infoinside2{
+    float: left;
+    font-size: 20px;
+    font-weight:100;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration-line:none;
+    line-height: 1.7rem;
+    color: whitesmoke;   
+}
+
+#game-over-board{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding:93px 300px;
+    background-color: white;
+    text-align: center;
+    display: none;
+    box-shadow:  1px 2px 10px 0 rgba(0, 0, 0, 0.65),
+    0 5px 15px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.Game-over-sentence{
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 10px 15px;
+    background-color: bisque;
+    padding:2rem 4rem;
+    color: black;
+    font-size: 2rem;
+}
+.Your-score-sentence{
+    text-decoration:solid;
+    font-size: 1.5rem; 
+    font-style:unset;
+}
+.restart-button-for-score
+{
+    position: relative;
+    padding: 10px 22px;
+    margin-top: 2rem;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: aliceblue;
+    border-radius: 5px;
+}
+.restart-button-for-score:hover{
+    background-color:rgba(0, 0, 0, 0.7);
+}
