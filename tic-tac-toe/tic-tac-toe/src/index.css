@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body {
+  margin: 0;
+  background-color: #efefef;
+  font-family: "Fredoka", sans-serif;
+  /* background-image: -moz-linear-gradient(); */
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}

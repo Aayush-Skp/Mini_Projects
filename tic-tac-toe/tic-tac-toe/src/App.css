@@ -1,0 +1,23 @@
+.container{
+  height: calc(100vh - 100px);
+  min-width: 326px;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+
+
+}
+.for-image{
+  opacity: 1;
+  background-image: url(illus.png);
+  height: 640px;
+  width: 480px;
+  position:absolute;
+  bottom: 0;
+  left: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
